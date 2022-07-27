@@ -1,0 +1,17 @@
+div{
+    background-color: black;
+}
+
+#LogoAP{
+    width: 135px;
+}
+
+#Facebook,
+#Twitter,
+#Github,
+#Instagram,
+#Linkedin{
+    width: 50px;
+    float: right;
+    margin-top: 13px;
+}
