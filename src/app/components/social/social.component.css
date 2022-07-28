@@ -2,9 +2,12 @@
 div{
     background-color: rgb(49, 45, 45);
 }
+
 /* Logo Argentina Programa */
 #LogoAP{
     width: 135px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Redes Sociales */
@@ -23,6 +26,7 @@ div{
     font-weight: bold;
     font-size: x-large;
     margin-top: 13px;
+    margin-right: 20px;
     box-shadow: 2px 2px 2px 2px rgb(167, 159, 159);
 }
  #BotonLogueo{
