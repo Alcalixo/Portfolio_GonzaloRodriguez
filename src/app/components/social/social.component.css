@@ -1,11 +1,13 @@
+/* generales */
 div{
     background-color: black;
 }
-
+/* Logo Argentina Programa */
 #LogoAP{
     width: 135px;
 }
 
+/* Redes Sociales */
 #Facebook,
 #Twitter,
 #Github,
@@ -15,3 +17,13 @@ div{
     float: right;
     margin-top: 13px;
 }
+
+/*Boton Login */
+.btn{
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 8px;
+}
+ #BotonLogueo{
+    flex:content;
+ }
