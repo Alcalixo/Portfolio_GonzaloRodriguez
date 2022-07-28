@@ -1,6 +1,6 @@
 /* generales */
 div{
-    background-color: black;
+    background-color: rgb(49, 45, 45);
 }
 /* Logo Argentina Programa */
 #LogoAP{
@@ -23,6 +23,7 @@ div{
     font-weight: bold;
     font-size: x-large;
     margin-top: 13px;
+    box-shadow: 2px 2px 2px 2px rgb(167, 159, 159);
 }
  #BotonLogueo{
     flex:content;
