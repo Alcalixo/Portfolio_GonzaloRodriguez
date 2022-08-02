@@ -3,6 +3,10 @@ div{
     background-color: rgb(49, 45, 45);
     align-items: center;
 }
+.container-fuild{
+   padding-right: 6px;
+   margin-right: 6px;
+}
 
 /* Logo Argentina Programa */
 #LogoAP{
@@ -18,15 +22,3 @@ div{
     width: 50px;
     float: right;
 }
-
-/*Boton Login */
-.btn{
-    font-weight: bold;
-    font-size: x-large;
-    box-shadow: 2px 2px 2px 2px rgb(167, 159, 159);
-}
-#BotonLogueo{
-    flex:content;
-    margin-right: 15px;
-    margin-top: 10px;
- }
