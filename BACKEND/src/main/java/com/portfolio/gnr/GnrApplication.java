@@ -1,4 +1,4 @@
-package com.portfolio.argentinaprograma;
+package com.portfolio.gnr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

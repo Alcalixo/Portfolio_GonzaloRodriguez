@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.portfolio</groupId>
-	<artifactId>argentinaprograma</artifactId>
+	<artifactId>gnr</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gnr</name>
-	<description>BACKEND proyecto integrador</description>
+	<description>Portfolio de GNR Argentina Programa</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

@@ -1,4 +1,4 @@
-package com.portfolio.argentinaprograma;
+package com.portfolio.gnr;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
