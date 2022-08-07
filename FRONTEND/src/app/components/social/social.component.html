@@ -14,7 +14,13 @@
         </div>
 <!--Boton de Logueo-->
         <div class="col-xl-2 col-md-2 col-lg-2 col-sm-3 col-xs-12">
-            <app-login-button></app-login-button>
+            <div class="container-fuild" id="BotonLogueo">
+                <form>
+                    <div class="mb-3 gap-3 d-md-flex justify-content-md-end mb-3">
+                        <button type="submit" class="btn btn-dark" (click)="login()">Ingresar</button>       
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
