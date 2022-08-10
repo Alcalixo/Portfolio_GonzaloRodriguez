@@ -1,5 +1,6 @@
 *{
-    background-color: rgb(80, 80, 92);
+    background: rgb(215,209,209);
+    background: linear-gradient(90deg, rgb(145, 144, 144) 0%, rgb(43, 42, 43) 53%, rgb(139, 139, 139) 100%);
     padding-top: 5px;
 }
 .row{

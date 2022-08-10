@@ -1,11 +1,11 @@
 /* generales */
 div{
-    background-color: rgb(49, 45, 45);
     align-items: center;
 }
-.container-fuild{
-   padding-right: 6px;
-   margin-right: 6px;
+#principal{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+   /*margin-right: 6px;*/
 }
 
 /* Logo Argentina Programa */
@@ -33,4 +33,5 @@ div{
     flex:content;
     margin-right: 5px;
     margin-top: 10px;
+    padding-right: 6px;
  }
