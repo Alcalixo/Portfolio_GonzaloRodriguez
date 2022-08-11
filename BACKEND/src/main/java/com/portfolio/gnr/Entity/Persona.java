@@ -18,10 +18,10 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-  //  @NotNull
+    //@NotNull
     @Size (min = 1, max = 50, message = "Debe ingresar un valor válido")
     private String nombre;
-  //  @NotNull
+    //@NotNull
     @Size (min = 1, max = 50, message = "Debe ingresar un valor válido")
     private String apellido;
     @Size (min = 1, max = 50, message = "Debe ingresar un valor válido")
