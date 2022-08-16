@@ -17,7 +17,8 @@
             <div class="container-fuild" id="BotonLogueo">
                 <form>
                     <div class="mb-3 gap-3 d-md-flex justify-content-md-end mb-3">
-                        <button type="submit" class="btn btn-dark" (click)="login()">Ingresar</button>       
+                        <button type="submit" class="btn btn-dark" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+                        <button type="submit" class="btn btn-dark" (click)="onLogOut()" *ngIf="isLogged">Salir</button>       
                     </div>
                 </form>
             </div>
