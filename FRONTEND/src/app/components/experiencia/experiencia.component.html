@@ -5,16 +5,26 @@
                 Experiencia Laboral
             </h2>
         </div>
+        <div class="col-xl-2 justify-content-end">
+            <button type="button" class="btn btn-dark" routerLink="/nuevaExperiencia" *ngIf="isLogged">
+                Agregar Experiencia
+            </button>
+        </div>
     </div>
-    <dl class="row offset-xl-1"> 
-        <dt class="col-sm-2">Palabra 1</dt>
-        <dd class="col-sm-7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam deleniti architecto iste laborum omnis saepe repellendus voluptatibus? Fugiat tempora illo nostrum delectus tenetur architecto nemo nobis numquam! Deleniti, rem dolor.</dd>
-        <li class="col-sm-2">Imagen</li>
-        <dt class="col-sm-2">Palabra 2</dt>
-        <dd class="col-sm-7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, illum laboriosam animi consequatur nobis assumenda vel. Amet assumenda tempora, in cum quasi dolor ipsa soluta tenetur quos fugiat vero placeat?</dd>
-        <li class="col-sm-2">Imagen</li>
-        <dt class="col-sm-2">Palabra 3</dt>
-        <dd class="col-sm-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam obcaecati quisquam velit id alias porro labore ex facilis. Maxime eos illum suscipit explicabo velit! Esse pariatur asperiores vel quos numquam!</dd>
-        <li class="col-sm-2">Imagen</li>
-    </dl>
+    <div class="row">
+        <div class="col-sm 1">
+        </div>
+        <div class="col-sm-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Experiencia of experiencia">
+                        <td class="col-sm-2"><h4>{{Experiencia.nombreE}}</h4></td>
+                        <td class="col-sm-7">{{Experiencia.descripcionE}}</td>
+                        <td class="col-sm-1" *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editarExperiencia/{{Experiencia.id}}"><i class="bi bi-pencil-square"></i> Editar</button></td>
+                        <td class="col-sm-1" *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)"><i class="bi bi-trash"></i> Borrar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

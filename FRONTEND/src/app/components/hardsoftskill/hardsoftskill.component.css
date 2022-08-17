@@ -1,5 +1,6 @@
 /* -- Generales -- */
+
 #hard-skills{
-    padding: 25px;
-    margin: 25px;
+    background: rgb(154,195,241);
+    background: linear-gradient(90deg, rgba(130,157,235,1) 0%, rgba(255,255,255,1) 52%, rgba(130,157,235,1) 100%);
 }
