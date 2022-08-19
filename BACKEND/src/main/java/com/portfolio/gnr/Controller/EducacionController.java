@@ -41,7 +41,7 @@ public class EducacionController {
             return new ResponseEntity(new Mensaje("El Nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         if (educacionService.existsByNombreEdu(dtoEducacion.getNombreEdu())) {
-            return new ResponseEntity(new Mensaje("Esa educacion ya existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Ese Nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
 
         Educacion educacion = new Educacion(dtoEducacion.getNombreEdu(), dtoEducacion.getDescripcionEdu());
@@ -55,10 +55,11 @@ public class EducacionController {
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoEducacion dtoEducacion) {
         //Validamos la existencia por Id
         if (!educacionService.existsById(id)) {
-            return new ResponseEntity(new Mensaje("El id no existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El Id no existe"), HttpStatus.NOT_FOUND);
         }
         //Validamos la existencia por nombre
-        if (educacionService.existsByNombreEdu(dtoEducacion.getNombreEdu()) && educacionService.getByNombreEdu(dtoEducacion.getNombreEdu()).get().getId() != id) {
+        if (educacionService.existsByNombreEdu(dtoEducacion.getNombreEdu())
+                && educacionService.getByNombreEdu(dtoEducacion.getNombreEdu()).get().getId() != id) {
             return new ResponseEntity(new Mensaje("Esa educacion ya existe"), HttpStatus.BAD_REQUEST);
         }
         //No puede estar vacío el campo
@@ -80,7 +81,7 @@ public class EducacionController {
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         //Validamos la existencia por Id
         if (!educacionService.existsById(id)) {
-            return new ResponseEntity(new Mensaje("El Id no existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El Id no existe"), HttpStatus.NOT_FOUND);
         }
 
         educacionService.delete(id);
@@ -92,7 +93,7 @@ public class EducacionController {
     @GetMapping("/detail/{id}")
     public ResponseEntity<Educacion> getById(@PathVariable("id") int id) {
         if (!educacionService.existsById(id)) {
-            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+            return new ResponseEntity(new Mensaje("No existe esa Id"), HttpStatus.NOT_FOUND);
         }
         Educacion educacion = educacionService.getOne(id).get();
         return new ResponseEntity(educacion, HttpStatus.OK);

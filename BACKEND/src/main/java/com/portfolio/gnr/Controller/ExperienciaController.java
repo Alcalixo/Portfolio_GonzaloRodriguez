@@ -55,7 +55,7 @@ public class ExperienciaController {
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoExperiencia dtoExperiencia) {
         //Validamos la existencia por Id
         if (!experienciaService.existsById(id)) {
-            return new ResponseEntity(new Mensaje("El id no existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El Id no existe"), HttpStatus.BAD_REQUEST);
         }
         //Validamos la existencia por nombre
         if (experienciaService.existsByNombreE(dtoExperiencia.getNombreE()) && experienciaService.getByNombreE(dtoExperiencia.getNombreE()).get().getId() != id) {
