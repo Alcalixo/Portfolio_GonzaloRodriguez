@@ -85,7 +85,7 @@ public class ExperienciaController {
 
         experienciaService.delete(id);
 
-        return new ResponseEntity(new Mensaje("Esperiencia eliminada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
     }
 
     @PreAuthorize("hasRole('ADMIN')")
