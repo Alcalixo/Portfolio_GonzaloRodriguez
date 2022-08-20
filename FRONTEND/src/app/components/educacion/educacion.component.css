@@ -2,10 +2,3 @@
     background: rgb(154,195,241);
     background: linear-gradient(90deg, rgba(130,157,235,1) 0%, rgba(255,255,255,1) 52%, rgba(130,157,235,1) 100%);
 }
-#titulo{
-    text-align: end;
-}
-
-dd{
-    text-align: end;
-}
