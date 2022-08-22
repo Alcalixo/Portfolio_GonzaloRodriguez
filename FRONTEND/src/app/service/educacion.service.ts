@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  educacionURL = 'https://argentina-programa-gnr.herokuapp.com/educacion/';
+  educacionURL = 'https://frozen-ravine-99958.herokuapp.com/educacion/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -9,7 +9,7 @@ import { persona } from '../model/persona.model';
 })
 export class PersonaService {
   
-  URL = 'https://argentina-programa-gnr.herokuapp.com/personas/';
+  URL = 'https://frozen-ravine-99958.herokuapp.com/personas/';
   
   constructor(private http: HttpClient) { }
 

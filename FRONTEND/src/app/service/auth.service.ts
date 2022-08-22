@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'https://argentina-programa-gnr.herokuapp.com/auth/';
+  authUrl = 'https://frozen-ravine-99958.herokuapp.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
