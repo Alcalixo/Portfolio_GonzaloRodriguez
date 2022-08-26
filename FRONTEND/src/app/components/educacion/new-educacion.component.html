@@ -3,13 +3,18 @@
         <div class="col-lg-6">
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
             <div class="form-group">
-                <label for="nombreE">Título o Disciplina</label>
-                <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreEdu" name="nombreE" required>
+                <label for="nombreEdu">Título o Disciplina</label>
+                <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="nombreEdu" name="nombreEdu" required>
             </div>
             <br>
             <div class="form-group">
-                <label for="descripcionE">Descripcion del curso/disciplina</label>
-                <textarea type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionEdu" name="descripcionE" required></textarea>
+                <label for="descripcionEdu">Descripcion del curso/disciplina</label>
+                <textarea type="text" class="form-control" id="descripcionEdu" name="descripcionEdu" [(ngModel)]="descripcionEdu" name="descripcionEdu" required></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="urlImgEdu">URL Imagen de Referencia</label>
+                <input type="text" class="form-control" id="urlImgEdu" name="urlImgEdu" [(ngModel)]="urlImgEdu" name="urlImgEdu">
             </div>
             <br>
             <button class="btn btn-dark">Agregar</button>

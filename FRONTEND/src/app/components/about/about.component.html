@@ -2,19 +2,18 @@
     <!--Foto de Perfil-->
     <div class="row"> 
         <div class="col-xl-3 col-sm-12 col-md-6 col-lg-3">
-            <img class="img-fluid rounded-circle" src="https://i.ibb.co/jVt6Sjz/perfil.jpg" alt="perfil"  id="FotoPerfil">
+            <img class="img-fluid rounded-circle" src="{{persona.img}}" alt="perfil"  id="FotoPerfil">
         </div>
     <!--Nombre y Título-->
         <div class="col-xl-4 col-sm-12 col-md-6 col-lg-4">
             <p id="Nombre">{{persona.apellido}} {{persona.nombre}}</p>
-            <p id="Titulo">Full Stack Developer Junior</p>
+            <p id="Titulo">{{persona.profesion}}</p>
         </div>
     <!--Acerca de-->
         <div class="col-xl-5 col-sm-12 col-md-12 col-lg-5">
             <span>
                 <h1>Acerca de mí</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aspernatur vitae numquam placeat sed. Consequatur ut maxime, nobis suscipit similique eius. Cumque aliquam obcaecati placeat veniam aliquid doloribus amet hic.
-                </p>
+                <p>{{persona.descripcion}}</p>
             </span>
         </div>
     </div>

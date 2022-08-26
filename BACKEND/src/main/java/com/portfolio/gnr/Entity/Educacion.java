@@ -13,14 +13,16 @@ public class Educacion {
     private int id;
     private String nombreEdu;
     private String descripcionEdu;
+    private String urlImgEdu;
 
     //Constructor
     public Educacion() {
     }
 
-    public Educacion(String nombreEdu, String descripcionEdu) {
+    public Educacion(String nombreEdu, String descripcionEdu, String urlImgEdu) {
         this.nombreEdu = nombreEdu;
         this.descripcionEdu = descripcionEdu;
+        this.urlImgEdu = urlImgEdu;
     }
     //Getters && Setters
 
@@ -46,6 +48,14 @@ public class Educacion {
 
     public void setDescripcionEdu(String descripcionEdu) {
         this.descripcionEdu = descripcionEdu;
+    }
+
+    public String getUrlImgEdu() {
+        return urlImgEdu;
+    }
+
+    public void setUrlImgEdu(String urlImgEdu) {
+        this.urlImgEdu = urlImgEdu;
     }
 
 }

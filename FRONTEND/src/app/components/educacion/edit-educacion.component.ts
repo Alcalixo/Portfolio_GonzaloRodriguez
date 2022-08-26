@@ -18,7 +18,6 @@ export class EditEducacionComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     this.educacionService.detail(id).subscribe(data => {
-      alert("Educación Actualizada");
       this.educacion = data;
   }, err => {
     alert("Algo salió mal");
@@ -30,6 +29,7 @@ export class EditEducacionComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     this.educacionService.update(id, this.educacion).subscribe(data => {
       this.router.navigate(['']);
+      alert("Educación Actualizada");
     }, err => {
       alert ("Error al Modificar");
       this.router.navigate(['']);

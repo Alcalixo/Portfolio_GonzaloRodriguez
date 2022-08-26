@@ -6,19 +6,33 @@
         </div>
 <!--Redes sociales-->
         <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-md-7 col-sm-6 col-xs-12">
-            <a href="" target="_blank"><img src="https://i.ibb.co/QjRyNdd/facebook-logo.png" alt="facebook-logo" id="Facebook"></a>
-            <a href="https://github.com/Alcalixo" target="_blank"><img src="https://i.ibb.co/0JG8bR8/github-logo.png" alt="github-logo"  id="Github"></a>
-            <a href="https://www.instagram.com/alcalixo/" target="_blank"><img src="https://i.ibb.co/P4R0tdc/instagram-logo.png" alt="instagram-logo" id="Instagram"></a>
-            <a href="https://www.linkedin.com/in/rodriguez-gonzalo/" target="_blank"><img src="https://i.ibb.co/4gF2CqQ/linkedin-logo.png" alt="linkedin-logo" id="Linkedin"></a>
-            <a href="https://twitter.com/Alcalixo" target="_blank"><img src="https://i.ibb.co/Cvnwc9V/twitter-logo.png" alt="twitter-logo" id="Twitter"></a>
+            <a href="" target="_blank">
+                <img src="https://i.ibb.co/QjRyNdd/facebook-logo.png" alt="facebook-logo" id="Facebook">
+            </a>
+            <a href="https://github.com/Alcalixo" target="_blank">
+                <img src="https://i.ibb.co/0JG8bR8/github-logo.png" alt="github-logo" id="Github">
+            </a>
+            <a href="https://www.instagram.com/alcalixo/" target="_blank">
+                <img src="https://i.ibb.co/P4R0tdc/instagram-logo.png" alt="instagram-logo" id="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/rodriguez-gonzalo/" target="_blank">
+                <img src="https://i.ibb.co/4gF2CqQ/linkedin-logo.png" alt="linkedin-logo" id="Linkedin">
+            </a>
+            <a href="https://twitter.com/Alcalixo" target="_blank">
+                <img src="https://i.ibb.co/Cvnwc9V/twitter-logo.png" alt="twitter-logo" id="Twitter">
+            </a>
         </div>
 <!--Boton de Logueo-->
         <div class="col-xl-2 col-md-2 col-lg-2 col-sm-3 col-xs-12">
             <div class="container-fuild" id="BotonLogueo">
                 <form>
                     <div class="mb-3 gap-3 d-md-flex justify-content-md-end mb-3">
-                        <button type="submit" class="btn btn-dark" (click)="login()" *ngIf="!isLogged">Ingresar</button>
-                        <button type="submit" class="btn btn-dark" (click)="onLogOut()" *ngIf="isLogged">Salir</button>       
+                        <button type="submit" class="btn btn-dark" (click)="login()" *ngIf="!isLogged">
+                            <i class="bi bi-box-arrow-in-left"> Ingresar</i>
+                        </button>
+                        <button type="submit" class="btn btn-dark" (click)="onLogOut()" *ngIf="isLogged">
+                            <i class="bi bi-box-arrow-right"> Salir</i>
+                        </button>       
                     </div>
                 </form>
             </div>

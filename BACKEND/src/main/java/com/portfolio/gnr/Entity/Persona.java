@@ -20,8 +20,10 @@ public class Persona {
     @NotNull
     @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String apellido;
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
+
     private String img;
+    private String descripcion;
+    private String profesion;
 
     public Long getId() {
         return id;
@@ -53,6 +55,22 @@ public class Persona {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getProfesion() {
+        return profesion;
+    }
+
+    public void setProfesion(String profesion) {
+        this.profesion = profesion;
     }
 
 }

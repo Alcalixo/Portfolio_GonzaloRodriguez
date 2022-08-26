@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-//import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +35,7 @@ public class EducacionController {
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
-    //@PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoEducacion dtoEducacion) {
         if (StringUtils.isBlank(dtoEducacion.getNombreEdu())) {
@@ -45,13 +45,13 @@ public class EducacionController {
             return new ResponseEntity(new Mensaje("Ese Nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Educacion educacion = new Educacion(dtoEducacion.getNombreEdu(), dtoEducacion.getDescripcionEdu());
+        Educacion educacion = new Educacion(dtoEducacion.getNombreEdu(), dtoEducacion.getDescripcionEdu(), dtoEducacion.getUrlImgEdu());
         educacionService.save(educacion);
 
         return new ResponseEntity(new Mensaje("Educacion agregada con éxito"), HttpStatus.OK);
     }
 
-    //@PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoEducacion dtoEducacion) {
         //Validamos la existencia por Id
@@ -71,13 +71,14 @@ public class EducacionController {
         Educacion educacion = educacionService.getOne(id).get();
         educacion.setNombreEdu(dtoEducacion.getNombreEdu());
         educacion.setDescripcionEdu(dtoEducacion.getDescripcionEdu());
+        educacion.setUrlImgEdu(dtoEducacion.getUrlImgEdu());
 
         educacionService.save(educacion);
 
         return new ResponseEntity(new Mensaje("Educacion Actualizada"), HttpStatus.OK);
     }
 
-    //@PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         //Validamos la existencia por Id
@@ -90,7 +91,7 @@ public class EducacionController {
         return new ResponseEntity(new Mensaje("Eduacacion eliminada"), HttpStatus.OK);
     }
 
-    //@PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/detail/{id}")
     public ResponseEntity<Educacion> getById(@PathVariable("id") int id) {
         if (!educacionService.existsById(id)) {

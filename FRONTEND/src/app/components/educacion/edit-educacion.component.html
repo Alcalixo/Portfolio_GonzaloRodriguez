@@ -9,7 +9,12 @@
             <br>
             <div class="form-group">
                 <label for="descripcionEdu">Descripcion del Curso/Disciplina</label>
-                <textarea type="text" class="form-control" id="descripcionE" name="descripcionEdu" [(ngModel)]="educacion.descripcionEdu" name="descripcionEdu" required></textarea>
+                <textarea type="text" class="form-control" id="descripcionEdu" name="descripcionEdu" [(ngModel)]="educacion.descripcionEdu" name="descripcionEdu" required></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="urlImgEdu">URL Imagen de Referencia</label>
+                <input type="text" class="form-control" id="urlImgEdu" name="urlImgEdu" [(ngModel)]="educacion.urlImgEdu" name="urlImgEdu">
             </div>
             <br>
             <button class="btn btn-dark">Actualizar datos</button>

@@ -8,14 +8,16 @@ public class DtoEducacion {
     private String nombreEdu;
     @NotBlank
     private String descripcionEdu;
+    private String urlImgEdu;
 
     //Constructor
     public DtoEducacion() {
     }
 
-    public DtoEducacion(String nombreEdu, String descripcionEdu) {
+    public DtoEducacion(String nombreEdu, String descripcionEdu, String urlImgEdu) {
         this.nombreEdu = nombreEdu;
         this.descripcionEdu = descripcionEdu;
+        this.urlImgEdu = urlImgEdu;
     }
 
     //Getters && Setters
@@ -33,6 +35,14 @@ public class DtoEducacion {
 
     public void setDescripcionEdu(String descripcionEdu) {
         this.descripcionEdu = descripcionEdu;
+    }
+
+    public String getUrlImgEdu() {
+        return urlImgEdu;
+    }
+
+    public void setUrlImgEdu(String urlImgEdu) {
+        this.urlImgEdu = urlImgEdu;
     }
 
 }
