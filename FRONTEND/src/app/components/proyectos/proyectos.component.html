@@ -1,38 +1,30 @@
 <div class="container-fuild" id="principal">
-    <div class="row">
-      <div class="col-xl-1"></div>
-      <div class="col-xl-11">
-        <h1>Proyectos</h1>
-      </div>
-        
+  <div class="row">
+    <div class="col-xl offset-xl-1">
+        <h2>
+            Proyectos
+        </h2>
     </div>
+    <div class="col-xl-2 justify-content-end">
+        <button type="button" class="btn btn-dark" routerLink="/nuevoProyecto" *ngIf="isLogged">
+            Agregar Proyecto
+        </button>
+    </div>
+</div>
     <div class="container">
       <div class="row">
         <div class="col-md w-45">        
-            <div class="card">
+            <div class="card" *ngFor="let Proyectos of proyectos">
               <div class="card-body">
-                <h4 class="card-title">Titulo de la tarjeta 2</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
-                                      tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
-                                      nec tortor sit amet, maximus mattis dui. </p>
-                <a href="#" class="btn btn-primary">Ir</a>
+                <h4 class="card-title">{{Proyectos.nombreP}}</h4>
+                <p class="card-text">{{Proyectos.descripcionP}}</p>
+                <a href="https://portfoliognr-argentinaprograma.web.app" target="_blank" class="btn btn-primary">Visitar</a>
+                <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editarProyecto/{{Proyectos.id}}"><i class="bi bi-pencil-square"></i> Editar</button></td>
+                <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Proyectos.id)"><i class="bi bi-trash"></i> Borrar</button></td>
               </div>
-                <img class="card-img-bottom" src="../../../assets/images/ProyectoFinal.png" id="proyecto">                        
+                <img class="card-img-bottom" src="{{Proyectos.urlImgP}}">                 
             </div>          
         </div>
-        <div class="col-md w-45">        
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Titulo de la tarjeta 2</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
-                                      tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
-                                      nec tortor sit amet, maximus mattis dui. </p>
-                <a href="#" class="btn btn-primary">Ir</a>
-              </div>
-                <img class="card-img-bottom" src="../../../assets/images/ProyectoFinal.png" id="proyecto">                        
-            </div>          
-        </div>
+      </div>
     </div>
-    </div>
-    <br>
 </div>

@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  experienciaURL='https://frozen-ravine-99958.herokuapp.com/explab/'
+  experienciaURL='https://frozen-ravine-99958.herokuapp.com/explab/';
 
   constructor(private httpClient: HttpClient) { }
 

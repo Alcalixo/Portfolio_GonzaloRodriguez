@@ -22,7 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("explab")
-@CrossOrigin(origins = "https://portfoliognr-argentinaprograma.web.app/")
+@CrossOrigin(origins = "https://portfoliognr-argentinaprograma.web.app")
+//@CrossOrigin (origins = "http://localhost:8080")
 public class ExperienciaController {
 
     @Autowired
@@ -58,7 +59,8 @@ public class ExperienciaController {
             return new ResponseEntity(new Mensaje("El Id no existe"), HttpStatus.BAD_REQUEST);
         }
         //Validamos la existencia por nombre
-        if (experienciaService.existsByNombreE(dtoExperiencia.getNombreE()) && experienciaService.getByNombreE(dtoExperiencia.getNombreE()).get().getId() != id) {
+        if (experienciaService.existsByNombreE(dtoExperiencia.getNombreE()) 
+                && experienciaService.getByNombreE(dtoExperiencia.getNombreE()).get().getId() != id) {
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
         }
         //No puede estar vacío el campo

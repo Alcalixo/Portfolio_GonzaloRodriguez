@@ -5,6 +5,7 @@ import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
 import { NuevoUsuario } from '../model/nuevo-usuario';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,11 +14,11 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public nuevo(nuevoUsuario: NuevoUsuario):Observable<any>{
+  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
     return this.httpClient.post<any>(this.authUrl + 'nuevo', nuevoUsuario);
   }
 
-  public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
+  public login(loginUsuario: LoginUsuario): Observable<JwtDto> {
     return this.httpClient.post<JwtDto>(this.authUrl + 'login', loginUsuario);
   }
 }

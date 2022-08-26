@@ -16,6 +16,7 @@ export class EditExperienciaComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     this.experienciaService.detail(id).subscribe(data => {
+      alert("Experiencia Actualizada");
       this.expLab = data;
     }, err => {
       alert ("Error al Modificar");
