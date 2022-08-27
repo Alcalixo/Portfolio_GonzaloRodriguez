@@ -30,8 +30,13 @@ div{
     box-shadow: 2px 2px 2px 2px rgb(167, 159, 159);
 }
 #BotonLogueo{
-    flex:content;
+    /*flex:content;*/
     margin-right: 5px;
     margin-top: 10px;
     padding-right: 6px;
  }
+.col-xs-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
