@@ -11,3 +11,10 @@
     width: auto;
     height: 50px;
 }
+.col-xl{
+    padding-left: 30px;
+}
+#button{
+    justify-content: end;
+    align-items: center;
+}
