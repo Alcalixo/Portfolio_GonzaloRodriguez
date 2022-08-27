@@ -18,8 +18,8 @@ export class EditProyectoComponent implements OnInit {
     this.sProyectos.detail(id).subscribe(data => {
       this.proyectos = data;
     }, err =>{
-      alert ("Error al Modificar");
       this.router.navigate(['']);
+      alert ("No posee Permisos para Modificar");
     })
   }
 

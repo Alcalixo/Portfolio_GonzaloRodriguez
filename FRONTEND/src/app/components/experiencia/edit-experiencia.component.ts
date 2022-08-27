@@ -18,7 +18,7 @@ export class EditExperienciaComponent implements OnInit {
     this.experienciaService.detail(id).subscribe(data => {
       this.expLab = data;
     }, err => {
-      alert ("Algo salió mal");
+      alert ("No posee Permisos para Modificar");
       this.router.navigate(['']);
     }
     )}

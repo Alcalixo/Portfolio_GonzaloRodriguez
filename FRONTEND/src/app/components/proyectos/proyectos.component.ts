@@ -33,7 +33,7 @@ export class ProyectosComponent implements OnInit {
       this.sProyectos.delete(id).subscribe(data =>{
         this.cargarProyectos();
       }, err => {
-        alert("No se pudo borrar el Proyecto");
+        alert("No posee Permisos para Borrar");
       })
     }
   }

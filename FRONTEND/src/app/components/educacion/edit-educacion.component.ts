@@ -20,8 +20,8 @@ export class EditEducacionComponent implements OnInit {
     this.educacionService.detail(id).subscribe(data => {
       this.educacion = data;
   }, err => {
-    alert("Algo salió mal");
     this.router.navigate(['']);
+    alert("No posee Permisos para Modificar");
   }
   )}
 
