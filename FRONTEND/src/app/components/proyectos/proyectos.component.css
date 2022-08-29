@@ -5,6 +5,17 @@
 .card-body{
     text-align: center;
 }
-td{
-    display:flexbox;
+
+#button{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 25px;
 }
+#titulo{
+    padding-left: 25px;
+}
+/*.card-img-bottom{
+    width: 40%;
+    height: auto;
+}*/

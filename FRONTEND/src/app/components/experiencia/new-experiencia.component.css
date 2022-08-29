@@ -1,11 +1,19 @@
 .container-fuild{
     margin: 0px;
-    padding: 0px;
+    padding: 200px;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(123, 123, 248) 35%, rgba(0,212,255,1) 100%);
+    width: 100%;
 }
-.card-body{
-    background: rgb(154,195,241);
-    background: linear-gradient(90deg, rgba(130,157,235,1) 0%, rgba(255,255,255,1) 52%, rgba(130,157,235,1) 100%);;
+.card{
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    padding: 50px;
+}
+.form-group{
+    padding: 15px;
 }

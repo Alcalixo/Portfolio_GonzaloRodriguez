@@ -10,3 +10,12 @@
     justify-content: center;
     align-items: center;
 }
+#button{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 25px;
+}
+#titulo{
+    padding-left: 25px;
+}

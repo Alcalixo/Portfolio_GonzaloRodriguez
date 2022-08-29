@@ -1,24 +1,27 @@
 <div class="container-fuild" *ngIf="proyectos">
     <div class="row justify-content-center">
-        <div class="col-lg-6">
-        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-            <div class="form-group">
-                <label for="nombreP">Nombre Proyecto</label>
-                <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyectos.nombreP" name="nombreP" required>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="descripcionP">Descripción del Proyecto</label>
-                <textarea type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyectos.descripcionP" name="descripcionP" required></textarea>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="urlImgP">URL de la Imagen</label>
-                <input type="text" class="form-control" id="urlImgP" name="urlImgP" [(ngModel)]="proyectos.urlImgP" name="urlImgP" required>
-            </div>
-            <br>
-            <button class="btn btn-dark">Actualizar datos</button>
-        </form>
+        <div class="card">
+            <div class="col-lg-6">
+                <h3>Completar Campos</h3>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombreP">Nombre Proyecto</label>
+                        <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyectos.nombreP" name="nombreP" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="descripcionP">Descripción del Proyecto</label>
+                        <textarea type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyectos.descripcionP" name="descripcionP" required></textarea>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="urlImgP">URL de la Imagen</label>
+                        <input type="text" class="form-control" id="urlImgP" name="urlImgP" [(ngModel)]="proyectos.urlImgP" name="urlImgP" required>
+                    </div>
+                    <br>
+                    <button class="btn btn-dark">Actualizar datos</button>
+                </form>
+                </div>
         </div>
     </div>
 </div>
