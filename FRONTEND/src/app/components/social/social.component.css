@@ -2,6 +2,15 @@
 div{
     align-items: center;
 }
+
+div.row{
+    margin-right: 0px;
+}
+ 
+div.container-fluid{
+    padding-right: 0px;
+}
+
 #principal{
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(123, 123, 248) 35%, rgba(0,212,255,1) 100%);

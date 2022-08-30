@@ -14,15 +14,15 @@
             <table class="table">
                 <tbody>
                     <tr *ngFor="let Experiencia of experiencia">
-                        <td class="col-sm-2"><h4>{{Experiencia.nombreE}}</h4></td>
-                        <td class="col-sm-5">{{Experiencia.descripcionE}}</td>
-                        <td class="col-sm-1"><img src="{{Experiencia.urlImgE}}" alt="imgE"  id="imgE"></td>
-                        <td class="col-sm-1" *ngIf="isLogged">
+                        <td class="col-xs-3 col-sm-3 col-md-2"><h4>{{Experiencia.nombreE}}</h4></td>
+                        <td class="col-xs-7 col-sm-7 col-md-4">{{Experiencia.descripcionE}}</td>
+                        <td class="col-xs-2 col-sm-2 col-md-2"><img src="{{Experiencia.urlImgE}}" alt="imgE"  id="imgE"></td>
+                        <td class="col-xs-6 col-sm-6 col-md-1" *ngIf="isLogged">
                             <button class="btn btn-warning" routerLink="/editarExperiencia/{{Experiencia.id}}">
                                 <i class="bi bi-pencil-square"> Editar</i>
                             </button>
                         </td>
-                        <td class="col-sm-1" *ngIf="isLogged">
+                        <td class="col-xs-6 col-sm-6 col-md-1" *ngIf="isLogged">
                             <button class="btn btn-danger" (click)="delete(Experiencia.id)">
                                 <i class="bi bi-trash"> Borrar</i>
                             </button>

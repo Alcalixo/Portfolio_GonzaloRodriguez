@@ -5,7 +5,7 @@
     background: rgb(154,195,241);
     background: linear-gradient(90deg, rgba(130,157,235,1) 0%, rgba(255,255,255,1) 52%, rgba(130,157,235,1) 100%);
 }
-#skill{
+.skill{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,5 +17,5 @@
     padding-right: 25px;
 }
 #titulo{
-    padding-left: 25px;
+    padding-left: 15px;
 }
