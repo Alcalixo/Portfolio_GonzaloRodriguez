@@ -1,11 +1,18 @@
 package com.portfolio.gnr.Dto;
 
+import javax.validation.constraints.NotBlank;
+
 public class DtoPersona {
 
+    @NotBlank
     private String nombre;
+    @NotBlank
     private String apellido;
+    @NotBlank
     private String img;
+    @NotBlank
     private String descripcion;
+    @NotBlank
     private String profesion;
 
     public DtoPersona() {

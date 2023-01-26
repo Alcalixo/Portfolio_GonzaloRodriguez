@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins = {"https://portfoliognr-argentinaprograma.web.app","http://localhost:8080"})
+@CrossOrigin(origins = {"https://portfoliognr-argentinaprograma.web.app","http://localhost:4200"})
 public class EducacionController {
 
     @Autowired
@@ -37,14 +37,27 @@ public class EducacionController {
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoEducacion dtoEducacion) {
+        //No puede estar vacío el campo
         if (StringUtils.isBlank(dtoEducacion.getNombreEdu())) {
             return new ResponseEntity(new Mensaje("El Nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
+        if (StringUtils.isBlank(dtoEducacion.getLugarEdu())) {
+            return new ResponseEntity(new Mensaje("La institución educativa es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoEducacion.getFechaEdu())) {
+            return new ResponseEntity(new Mensaje("La fecha es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoEducacion.getDescripcionEdu())) {
+            return new ResponseEntity(new Mensaje("La descripción es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        
+        //Validamos la existencia por nombre
         if (educacionService.existsByNombreEdu(dtoEducacion.getNombreEdu())) {
             return new ResponseEntity(new Mensaje("Ese Nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Educacion educacion = new Educacion(dtoEducacion.getNombreEdu(), dtoEducacion.getDescripcionEdu(), dtoEducacion.getUrlImgEdu());
+        Educacion educacion = new Educacion(dtoEducacion.getNombreEdu(), dtoEducacion.getLugarEdu(),
+                dtoEducacion.getFechaEdu(), dtoEducacion.getDescripcionEdu(), dtoEducacion.getUrlImgEdu());
         educacionService.save(educacion);
 
         return new ResponseEntity(new Mensaje("Educacion agregada con éxito"), HttpStatus.OK);
@@ -64,11 +77,22 @@ public class EducacionController {
         }
         //No puede estar vacío el campo
         if (StringUtils.isBlank(dtoEducacion.getNombreEdu())) {
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El Nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoEducacion.getLugarEdu())) {
+            return new ResponseEntity(new Mensaje("La institución educativa es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoEducacion.getFechaEdu())) {
+            return new ResponseEntity(new Mensaje("La fecha es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoEducacion.getDescripcionEdu())) {
+            return new ResponseEntity(new Mensaje("La descripción es obligatoria"), HttpStatus.BAD_REQUEST);
         }
 
         Educacion educacion = educacionService.getOne(id).get();
         educacion.setNombreEdu(dtoEducacion.getNombreEdu());
+        educacion.setLugarEdu(dtoEducacion.getLugarEdu());
+        educacion.setFechaEdu(dtoEducacion.getFechaEdu());
         educacion.setDescripcionEdu(dtoEducacion.getDescripcionEdu());
         educacion.setUrlImgEdu(dtoEducacion.getUrlImgEdu());
 

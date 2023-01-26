@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/proyectos")
-@CrossOrigin(origins = {"https://portfoliognr-argentinaprograma.web.app", "http://localhost:8080"})
+@CrossOrigin(origins = {"https://portfoliognr-argentinaprograma.web.app", "http://localhost:4200"})
 public class ProyectoController {
 
     @Autowired
@@ -67,6 +67,9 @@ public class ProyectoController {
         //No puede estar vacío el campo
         if (StringUtils.isBlank(dtoProyectos.getNombreP())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoProyectos.getNombreP())) {
+            return new ResponseEntity(new Mensaje("La descripción es obligatoria"), HttpStatus.BAD_REQUEST);
         }
 
         Proyectos proyectos = proyectosService.getOne(id).get();

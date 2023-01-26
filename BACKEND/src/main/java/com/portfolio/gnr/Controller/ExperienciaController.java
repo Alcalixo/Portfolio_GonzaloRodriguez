@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("explab")
-@CrossOrigin(origins = {"https://portfoliognr-argentinaprograma.web.app", "http://localhost:8080"})
+@CrossOrigin(origins = {"https://portfoliognr-argentinaprograma.web.app", "http://localhost:4200"})
 public class ExperienciaController {
 
     @Autowired
@@ -37,14 +37,28 @@ public class ExperienciaController {
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoExperiencia dtoExperiencia) {
+
+        //No puede estar vacío el campo
         if (StringUtils.isBlank(dtoExperiencia.getNombreE())) {
             return new ResponseEntity(new Mensaje("El Nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        if (experienciaService.existsByNombreE(dtoExperiencia.getNombreE())) {
-            return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
+        if (StringUtils.isBlank(dtoExperiencia.getLugarE())) {
+            return new ResponseEntity(new Mensaje("El empleador es obligatorio"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoExperiencia.getFechaE())) {
+            return new ResponseEntity(new Mensaje("La fecha es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoExperiencia.getDescripcionE())) {
+            return new ResponseEntity(new Mensaje("La descripción es obligatoria"), HttpStatus.BAD_REQUEST);
         }
 
-        Experiencia experiencia = new Experiencia(dtoExperiencia.getNombreE(), dtoExperiencia.getDescripcionE(), dtoExperiencia.getUrlImgE());
+        //Validamos la existencia por nombre
+        if (experienciaService.existsByNombreE(dtoExperiencia.getNombreE())) {
+            return new ResponseEntity(new Mensaje("Esa experiencia laboral ya existe"), HttpStatus.BAD_REQUEST);
+        }
+
+        Experiencia experiencia = new Experiencia(dtoExperiencia.getNombreE(), dtoExperiencia.getLugarE(),
+                dtoExperiencia.getFechaE(), dtoExperiencia.getDescripcionE(), dtoExperiencia.getUrlImgE());
         experienciaService.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Experiencia agregada con éxito"), HttpStatus.OK);
@@ -58,17 +72,28 @@ public class ExperienciaController {
             return new ResponseEntity(new Mensaje("El Id no existe"), HttpStatus.BAD_REQUEST);
         }
         //Validamos la existencia por nombre
-        if (experienciaService.existsByNombreE(dtoExperiencia.getNombreE()) 
+        if (experienciaService.existsByNombreE(dtoExperiencia.getNombreE())
                 && experienciaService.getByNombreE(dtoExperiencia.getNombreE()).get().getId() != id) {
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
         }
         //No puede estar vacío el campo
         if (StringUtils.isBlank(dtoExperiencia.getNombreE())) {
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El Nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoExperiencia.getLugarE())) {
+            return new ResponseEntity(new Mensaje("La descripción es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoExperiencia.getFechaE())) {
+            return new ResponseEntity(new Mensaje("La fecha es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoExperiencia.getDescripcionE())) {
+            return new ResponseEntity(new Mensaje("La descripción es obligatoria"), HttpStatus.BAD_REQUEST);
         }
 
         Experiencia experiencia = experienciaService.getOne(id).get();
         experiencia.setNombreE(dtoExperiencia.getNombreE());
+        experiencia.setLugarE(dtoExperiencia.getLugarE());
+        experiencia.setFechaE(dtoExperiencia.getFechaE());
         experiencia.setDescripcionE(dtoExperiencia.getDescripcionE());
         experiencia.setUrlImgE(dtoExperiencia.getUrlImgE());
 

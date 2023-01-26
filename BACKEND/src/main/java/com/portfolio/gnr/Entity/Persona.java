@@ -15,11 +15,11 @@ public class Persona {
     private int id;
 
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
+    @Size(min = 1, max = 50, message = "Demasiado largo")
     private String nombre;
 
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
+    @Size(min = 1, max = 50, message = "Demasiado largo")
     private String apellido;
 
     @NotNull
@@ -31,6 +31,7 @@ public class Persona {
     @NotNull
     private String profesion;
 
+    //Constructor
     public Persona() {
     }
 
@@ -42,6 +43,7 @@ public class Persona {
         this.profesion = profesion;
     }
 
+    //Getters && Setters
     public int getId() {
         return id;
     }
