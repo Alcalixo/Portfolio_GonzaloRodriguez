@@ -1,9 +1,15 @@
 
 package com.portfolio.gnr.Entity;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 
 public class HardSoftSkill {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreS;
     private int porcentajeS;

@@ -78,7 +78,7 @@ public class HardSoftSkillController {
 
         hardSoftSkillService.save(hardSoftSkill);
 
-        return new ResponseEntity(new Mensaje("HardSoftSkill Actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Skill Actualizada"), HttpStatus.OK);
     }
 
     @PreAuthorize("hasRole('ADMIN')")
