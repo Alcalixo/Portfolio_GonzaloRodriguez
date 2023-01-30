@@ -13,6 +13,16 @@
                 </div>
                 <br>
                 <div class="form-group">
+                  <label for="lugarEdu">Institución Académica</label>
+                  <input type="text" class="form-control" id="lugarEdu" name="lugarEdu" [(ngModel)]="educacion.lugarEdu" name="lugarEdu" required>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="nombreEdu">Título o Disciplina</label>
+                <input type="text" class="form-control" id="nombreE" name="nombreEdu" [(ngModel)]="educacion.nombreEdu" name="nombreEdu" required>
+            </div>
+            <br>
+                <div class="form-group">
                     <label for="descripcionEdu">Descripcion del Curso/Disciplina</label>
                     <textarea type="text" class="form-control" id="descripcionEdu" name="descripcionEdu" [(ngModel)]="educacion.descripcionEdu" name="descripcionEdu" required></textarea>
                 </div>

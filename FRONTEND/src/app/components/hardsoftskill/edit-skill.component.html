@@ -1,0 +1,32 @@
+<div class="container-fuild py-5 h-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <h3 class="mb-5">Completar Campos</h3>
+              <!-- Formulario de Actualización -->
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreS">Nombre de la Hard/Soft Skill</label>
+                    <input type="text" class="form-control" id="nombreS" name="nombreS" [(ngModel)]="skill.nombreS" name="nombreS" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="porcentajeS">Porcentaje de Dominio de la Skill</label>
+                    <textarea type="text" class="form-control" id="porcentajeS" name="porcentajeS" [(ngModel)]="skill.porcentajeS" name="porcentajeS" required></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="imgS">URL Imagen de Referencia</label>
+                    <input type="text" class="form-control" id="imgS" name="imgS" [(ngModel)]="skill.imgS" name="imgS">
+                </div>
+                <br>
+                <button class="btn btn-dark">Actualizar datos</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

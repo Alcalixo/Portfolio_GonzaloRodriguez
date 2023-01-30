@@ -1,137 +1,56 @@
 <div class="container-fluid" id="hard-skills">
-    <div class="row" id="titulo">
-        <div class="col-xs-6 col-sm-6 col-md col-lg col-xl">
-            <h2>Hard & Soft Skills</h2>
-        </div>
-<!--    Queda por implementar  
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-2" id="button">
-            <button type="button" class="btn btn-dark">
-                <i class="bi bi-plus-circle"> Agregar Skill</i>
-            </button>
-        </div>
-        -->
+  <div class="row" id="titulo">
+    <div class="col-xs col-sm col-md col-lg col-xl">
+      <h2>Hard & Soft Skills</h2>
     </div>
-    <div class="row">
-<!--HTML-->
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 skill">
-            <circle-progress
-            [percent]="70"
-            [radius]="100"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="5"
-            [outerStrokeColor]="'#ff6633'"
-            [innerStrokeColor]="'#ff9900'"
-            [animation]="true"
-            [animationDuration]="700"
-            [showSubtitle]="false"
-            [showTitle]="false"
-            [showUnits]="false"
-            [showImage]="true"
-            [imageSrc]="'https://i.ibb.co/3WLjckz/html-logo.png'"
-            [imageWidth]="90"
-            [imageHeight]="90"
-            ></circle-progress>
-        </div>
-
-        <!--CSS-->
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 skill">
-            <circle-progress
-            [percent]="70"
-            [radius]="100"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#6699ff'"
-            [innerStrokeColor]="'#3366cc'"
-            [animation]="true"
-            [animationDuration]="300"
-            [showSubtitle]="false"
-            [showTitle]="false"
-            [showUnits]="false"
-            [showImage]="true"
-            [imageSrc]="'https://i.ibb.co/0hTgvjP/css-logo.png'"
-            [imageWidth]="90"
-            [imageHeight]="90"
-            ></circle-progress>    
-        </div>
-        <!--JavaScript-->
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 skill">
-            <circle-progress
-            [percent]="65"
-            [radius]="100"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#ffcc00'"
-            [innerStrokeColor]="'#ffcc99'"
-            [animation]="true"
-            [animationDuration]="300"
-            [showSubtitle]="false"
-            [showTitle]="false"
-            [showUnits]="false"
-            [showImage]="true"
-            [imageSrc]="'https://i.ibb.co/zx0BpDC/js-logo.webp'"
-            [imageWidth]="90"
-            [imageHeight]="90"
-            ></circle-progress>    
-        </div> 
-        <!--Office-->
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 skill">
-            <circle-progress
-            [percent]="80"
-            [radius]="100"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#ff6600'"
-            [innerStrokeColor]="'#ff6666'"
-            [animation]="true"
-            [animationDuration]="300"
-            [showSubtitle]="false"
-            [showTitle]="false"
-            [showUnits]="false"
-            [showImage]="true"
-            [imageSrc]="'https://i.ibb.co/vdZGJ1Z/office-logo.png'"
-            [imageWidth]="90"
-            [imageHeight]="90"
-            ></circle-progress>     
-        </div>
-        <!--Trabajo en Equipo-->
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 skill">
-            <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#330000'"
-            [innerStrokeColor]="'#333300'"
-            [animation]="true"
-            [animationDuration]="300"
-            [showSubtitle]="false"
-            [showTitle]="false"
-            [showUnits]="false"
-            [showImage]="true"
-            [imageSrc]="'https://i.ibb.co/p0z9T5K/groupjob-logo.png'"
-            [imageWidth]="90"
-            [imageHeight]="90"
-            ></circle-progress> 
-        </div>  
-        <!--Comunicación-->
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 skill">
-            <circle-progress
-            [percent]="80"
-            [radius]="100"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#660066'"
-            [innerStrokeColor]="'#660099'"
-            [animation]="true"
-            [animationDuration]="300"
-            [showSubtitle]="false"
-            [showTitle]="false"
-            [showUnits]="false"
-            [showImage]="true"
-            [imageSrc]="'https://i.ibb.co/0rKpcBk/comunicacion-logo.png'"
-            [imageWidth]="90"
-            [imageHeight]="90"
-            ></circle-progress>  
-        </div> 
+    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-2" id="button">
+      <button
+        type="button"
+        class="btn btn-dark"
+        routerLink="/nuevaSkill"
+        *ngIf="isLogged"
+      >
+        <i class="bi bi-plus-circle"> Agregar Skill</i>
+      </button>
     </div>
+  </div>
+  <div class="row">
+    <div
+      class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 skill"
+      *ngFor="let Skill of skill"
+    >
+      <circle-progress
+        [title]="(Skill.nombreS)"
+        [titleColor]="'#222222'"
+        [percent]="(Skill.porcentajeS)"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="5"
+        [outerStrokeColor]="'#ff6633'"
+        [innerStrokeColor]="'#ff9900'"
+        [animation]="true"
+        [animationDuration]="700"
+        [showSubtitle]="false"
+        [showTitle]="true"
+        [showUnits]="false"
+        [showImage]="true"
+        [imageSrc]="(Skill.imgS)"
+        [imageWidth]="90"
+        [imageHeight]="90"
+      ></circle-progress>
+      <td class="col-xs-2 col-sm-2 col-md-1" *ngIf="isLogged">
+        <button
+          class="btn btn-warning"
+          routerLink="/editarSkill/{{ Skill.id }}"
+        >
+          <i class="bi bi-pencil-square"> Editar</i>
+        </button>
+      </td>
+      <td class="col-xs-2 col-sm-2 col-md-1" *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(Skill.id)">
+          <i class="bi bi-trash"></i>
+        </button>
+      </td>
+    </div>
+  </div>
 </div>

@@ -10,6 +10,8 @@ import { EducacionService } from 'src/app/service/educacion.service';
 })
 export class NewEducacionComponent implements OnInit {
   nombreEdu: string;
+  lugarEdu: string;
+  fechaEdu: string;
   descripcionEdu: string;
   urlImgEdu: string;
 
@@ -19,7 +21,7 @@ export class NewEducacionComponent implements OnInit {
   }
 
   onCreate(): void {
-    const edu = new Educacion(this.nombreEdu, this.descripcionEdu, this.urlImgEdu);
+    const edu = new Educacion(this.nombreEdu, this.lugarEdu, this.fechaEdu, this.descripcionEdu, this.urlImgEdu);
     this.educacionService.save(edu).subscribe(data => {
       alert("Educación añadida");
       this.router.navigate(['']);
