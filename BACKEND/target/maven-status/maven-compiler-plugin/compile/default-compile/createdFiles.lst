@@ -1,4 +1,5 @@
 com\portfolio\gnr\Security\Controller\AuthController.class
+com\portfolio\gnr\Service\HardSoftSkillService.class
 com\portfolio\gnr\Service\ProyectosService.class
 com\portfolio\gnr\Security\jwt\JwtProvider.class
 com\portfolio\gnr\Security\Repository\RolRepository.class
@@ -10,6 +11,7 @@ com\portfolio\gnr\Security\Controller\Mensaje.class
 com\portfolio\gnr\Dto\DtoPersona.class
 com\portfolio\gnr\Controller\ProyectoController.class
 com\portfolio\gnr\Security\Enums\RolNombre.class
+com\portfolio\gnr\Dto\DtoHardSoftSkill.class
 com\portfolio\gnr\Controller\ExperienciaController.class
 com\portfolio\gnr\Security\Dto\LoginUsuario.class
 com\portfolio\gnr\Dto\DtoProyectos.class
@@ -23,6 +25,7 @@ com\portfolio\gnr\Security\jwt\JwtEntryPoint.class
 com\portfolio\gnr\Dto\DtoEducacion.class
 com\portfolio\gnr\Repository\ExperienciaRepository.class
 com\portfolio\gnr\Security\Dto\NuevoUsuario.class
+com\portfolio\gnr\Entity\HardSoftSkill.class
 com\portfolio\gnr\Service\EducacionService.class
 com\portfolio\gnr\Security\Repository\UsuarioRepository.class
 com\portfolio\gnr\Controller\EducacionController.class
@@ -33,7 +36,9 @@ com\portfolio\gnr\Security\Service\RolService.class
 com\portfolio\gnr\Security\Entity\Rol.class
 com\portfolio\gnr\Entity\Persona.class
 com\portfolio\gnr\Entity\Proyectos.class
+com\portfolio\gnr\Repository\HardSoftSkillRepository.class
 com\portfolio\gnr\Security\Entity\Usuario.class
 com\portfolio\gnr\Service\ExperienciaService.class
+com\portfolio\gnr\Controller\HardSoftSkillController.class
 com\portfolio\gnr\Entity\Experiencia.class
 com\portfolio\gnr\GnrApplication.class

@@ -1,4 +1,5 @@
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Service\ExperienciaService.java
+F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Service\HardSoftSkillService.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Repository\UsuarioRepository.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Entity\Educacion.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Service\ImpPersonaService.java
@@ -6,6 +7,7 @@ F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\ma
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Controller\AuthController.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\GnrApplication.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Repository\ExperienciaRepository.java
+F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Controller\HardSoftSkillController.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Entity\Persona.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\jwt\JwtEntryPoint.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Service\UserDetailsServiceImpl.java
@@ -13,16 +15,19 @@ F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\ma
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Controller\Mensaje.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Repository\ProyectosRepository.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Service\RolService.java
+F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Repository\HardSoftSkillRepository.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Dto\JwtDto.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Controller\ProyectoController.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Entity\Usuario.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Controller\PersonaController.java
+F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Entity\HardSoftSkill.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Repository\RolRepository.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Repository\IPersonaRepository.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\jwt\JwtProvider.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Controller\ExperienciaController.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Entity\Proyectos.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Dto\NuevoUsuario.java
+F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Dto\DtoHardSoftSkill.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Dto\DtoPersona.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Controller\EducacionController.java
 F:\Gonzalo\Programación\Proyecto Final\Portfolio_GonzaloRodriguez\BACKEND\src\main\java\com\portfolio\gnr\Security\Service\UsuarioService.java

@@ -62,7 +62,7 @@ public class PersonaController {
     */
     
     @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping("/update/{id}")
+    @PutMapping("/editar/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPersona dtoPersona) {
         //Validamos la existencia por Id
         if (!personaService.existsById(id)) {
@@ -83,6 +83,12 @@ public class PersonaController {
         if (StringUtils.isBlank(dtoPersona.getDescripcion())) {
             return new ResponseEntity(new Mensaje("La descripción es obligatoria"), HttpStatus.BAD_REQUEST);
         }
+        /*if (StringUtils.isBlank(dtoPersona.getProfesion())){
+            return new ResponseEntity(new Mensaje("La Profesion es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoPersona.getImg())){
+            return new ResponseEntity(new Mensaje("La Imagen es obligatoria"), HttpStatus.BAD_REQUEST);
+        }*/
 
         Persona persona = personaService.getOne(id).get();
 
