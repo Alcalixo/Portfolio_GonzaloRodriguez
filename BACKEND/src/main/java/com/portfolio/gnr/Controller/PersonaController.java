@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,7 +34,7 @@ public class PersonaController {
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
-    /*@PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoPersona dtoPersona) {
         
@@ -54,12 +55,12 @@ public class PersonaController {
         }
 
         Persona persona = new Persona(dtoPersona.getNombre(), dtoPersona.getApellido(), dtoPersona.getImg(),
-        dtoPersona.getDescripcion(), dtoPersona.getProfesion);
+        dtoPersona.getDescripcion(), dtoPersona.getProfesion());
         personaService.save(persona);
 
         return new ResponseEntity(new Mensaje("Persona agregada con éxito"), HttpStatus.OK);
     }
-    */
+    
     
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/editar/{id}")
@@ -103,7 +104,7 @@ public class PersonaController {
         return new ResponseEntity(new Mensaje("Persona Actualizada"), HttpStatus.OK);
     }
 
-    /*@PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         //Validamos la existencia por Id
@@ -114,8 +115,9 @@ public class PersonaController {
         personaService.delete(id);
 
         return new ResponseEntity(new Mensaje("Persona eliminada"), HttpStatus.OK);
-    }*/
-    @PreAuthorize("hasRole('ADMIN')")
+    }
+    
+    //@PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/detail/{id}")
     public ResponseEntity<Persona> getById(@PathVariable("id") int id) {
         if (!personaService.existsById(id)) {
